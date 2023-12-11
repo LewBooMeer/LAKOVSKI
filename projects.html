@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>lakovski</title>
+
+    <script src="script.js" defer></script>
+
+    <!-- g-fonts-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--end g-fonts-->
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="header navbar">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="projects.html" class="active">PROJECTS</a>
+        <a href="contact.html">CONTACT</a>
+      </div>
+
+      <div class="main">
+        <iframe
+          src="projects_files/pc_page.html"
+          title="Website Preview"
+          style="width: 100%; height: 100%; border: none; overflow: hidden"
+        ></iframe>
+      </div>
+
+      <div class="sidebar">
+        <div class="avatar-box">
+          <video class="avatar-video" autoplay muted loop playsinline>
+            <source src="images/AI_Avatar.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <!--typewriter js-->
+
+        <div class="sidebar" id="code"></div>
+        <div class="AI-text">
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const code = `          
+        Here is a.demo {of an
+       e-commerce product page
+       in form of a music album. 
+      The webpage code is embeded
+      and displayed as an<iframe>
+          element so you can
+           interact with the
+      "Select Media" buttons,
+   "Links" and the "Discography"
+sections directly from this page.
+                Try it:}`;
+              typeCode(code);
+            });
+          </script>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer">
+          <a href="mailto:lyubomir@lakovski.com">
+            <i class="fa-regular fa-envelope"></i>
+            <p class="email">lyubomir@lakovski.com</p>
+          </a>
+          <img class="logo" src="images/logo.png" alt="logo" />
+          <p>&copy; 2023</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

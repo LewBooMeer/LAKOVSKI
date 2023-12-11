@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>lakovski</title>
+
+    <script src="script.js" defer></script>
+
+    <!-- g-fonts-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--end g-fonts-->
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="header navbar">
+        <a href="index.html" class="active">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="contact.html">CONTACT</a>
+      </div>
+
+      <div class="main">
+        <h1 class="hello">LAKOVSKI</h1>
+
+        <div class="desk-box">
+          <video class="desk-video" autoplay muted playsinline>
+            <source src="images/desk.mov" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <div class="avatar-box">
+          <video class="avatar-video" autoplay muted loop playsinline>
+            <source src="images/AI_Avatar.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <!--typewriter js-->
+
+        <div class="sidebar" id="code"></div>
+        <div class="AI-text">
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const code = `          
+              HELL0,
+<>this is an AI-generated greeting
+   message, serving as your guide
+    through the intricacies of my 
+       web-development journey.
+      This place is currently
+    a digital construction zone!
+       You've stumbled upon a
+    work 1n progress, <a> tapestry
+of broken code & </a> playground
+       of wicked experiments.
+      Bugs beware, for you're
+     stepping into the realm of
+        perpetual beta.</>`;
+              typeCode(code);
+            });
+          </script>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer">
+          <a href="mailto:lyubomir@lakovski.com">
+            <i class="fa-regular fa-envelope"></i>
+            <p class="email">lyubomir@lakovski.com</p>
+          </a>
+          <img class="logo" src="images/logo.png" alt="logo" />
+          <p>&copy; 2023</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

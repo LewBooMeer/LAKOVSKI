@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>lakovski</title>
+    <!-- font awesome start-->
+    <script
+      src="https://kit.fontawesome.com/e1225b7137.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js" defer></script>
+
+    <!-- g-fonts-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--end g-fonts-->
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="header navbar">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="contact.html" class="active">CONTACT</a>
+      </div>
+
+      <div class="main">
+        <h1 class="hello">CONTACT</h1>
+
+        <div class="container">
+          <div class="typing box-pink">
+            <a href="https://github.com/LewBooMeer" target="_blank"
+              ><i class="fa-brands fa-square-github"></i>
+              <p class="link-text">GitHub</p></a
+            >
+          </div>
+          <div class="typing box-blue">
+            <a href="https://www.linkedin.com/in/lakovski/" target="_blank"
+              ><i class="fa-brands fa-linkedin"></i>
+              <p class="link-text">Linkendit</p></a
+            >
+          </div>
+
+          <div class="typing box-green">
+            <a href="https://soundcloud.com/lewboom"
+              ><i class="fa-brands fa-soundcloud" id="soundcloud"></i>
+              <p class="link-text">Soundcloud</p></a
+            >
+          </div>
+
+          <div class="typing box-pink">
+            <a href="https://www.instagram.com/lewboomeer/" target="_blank"
+              ><i class="fa-brands fa-square-instagram"></i>
+              <p class="link-text">Instagram</p></a
+            >
+          </div>
+          <div class="typing box-blue">
+            <a href="https://www.facebook.com/Lewboomeer/" target="_blank"
+              ><i class="fa-brands fa-square-facebook"></i>
+              <p class="link-text">Facebook</p></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!--end of contact container-->
+
+      <div class="sidebar">
+        <div class="avatar-box">
+          <video class="avatar-video" autoplay muted loop playsinline>
+            <source src="images/AI_Avatar.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <!--typewriter js-->
+
+        <div class="sidebar" id="code"></div>
+        <div class="AI-text">
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const code = `          
+        // Have a question
+    or want to discuss a project?
+       Feel free to reach out!`;
+              typeCode(code);
+            });
+          </script>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer">
+          <a href="mailto:lyubomir@lakovski.com">
+            <i class="fa-regular fa-envelope"></i>
+            <p class="email">lyubomir@lakovski.com</p>
+          </a>
+          <img class="logo" src="images/logo.png" alt="logo" />
+          <p>&copy; 2023</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
