@@ -144,6 +144,11 @@ body {
   max-height: fit-content;
 }
 
+.AI-text {
+  display: flex;
+  justify-content: center;
+}
+
 .keyword {
   color: #666;
   /* AI text */
