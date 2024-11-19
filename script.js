@@ -72,14 +72,15 @@ divs.forEach((div, index) => {
 //end cube animation
 
 //lightbox
+var currentSlideIndex = 0;
+
 function openLightbox(imgSrc, caption, index) {
   var lightbox = document.getElementById("lightbox");
   var lightboxImg = document.getElementById("lightboxImg");
   var lightboxCaption = document.getElementById("lightboxCaption");
 
-  if (typeof index !== "undefined") {
-    currentSlideIndex = index;
-  }
+  // Set currentSlideIndex based on index parameter
+  currentSlideIndex = index;
 
   lightbox.style.display = "flex";
   lightbox.style.opacity = 1;
@@ -105,15 +106,14 @@ function closeLightbox() {
   }, 500); // Adjust the duration to match the CSS transition duration
 }
 
-var currentSlideIndex = 0;
-
 function navigateLightbox(direction) {
-  currentSlideIndex += direction;
-
   // Get all image wrappers
   var imageWrappers = document.querySelectorAll(".image-wrapper");
 
-  // Wrap around if reaching the end
+  // Update currentSlideIndex based on direction
+  currentSlideIndex += direction;
+
+  // Wrap around if reaching the end or beginning
   if (currentSlideIndex < 0) {
     currentSlideIndex = imageWrappers.length - 1;
   } else if (currentSlideIndex >= imageWrappers.length) {
@@ -128,8 +128,7 @@ function navigateLightbox(direction) {
   );
 }
 
-// keyboard nav for lightbox
-
+// keyboard navigation for lightbox
 document.addEventListener("keydown", function (event) {
   // Check if the lightbox is open
   var lightbox = document.getElementById("lightbox");
@@ -145,9 +144,16 @@ document.addEventListener("keydown", function (event) {
       case 27: // Escape key
         closeLightbox();
         break;
-      // You can add more cases for other keys if needed
+      // Add more cases for other keys if needed
     }
   }
+});
+
+// Initialize lightbox for the first image
+document.querySelectorAll(".image-wrapper").forEach(function (wrapper, index) {
+  wrapper.addEventListener("click", function () {
+    openLightbox(wrapper.querySelector("img").src, `Image ${index + 1}`, index);
+  });
 });
 
 // end of lightbox
